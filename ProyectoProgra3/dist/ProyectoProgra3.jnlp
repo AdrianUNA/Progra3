@@ -8,7 +8,11 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+<<<<<<< HEAD
     <jar href="ProyectoProgra3.jar" size="79309" download="eager" />
+=======
+    <jar href="ProyectoProgra3.jar" size="81167" download="eager" />
+>>>>>>> e890d699eeb04ac91355021750bfeee96c67e471
     <jar href="lib\jfoenix.jar" size="2372209" download="eager" />
     <jar href="lib\ojdbc14.jar" size="1569316" download="eager" />
     <jar href="lib\ojdbc6.jar" size="2739670" download="eager" />
