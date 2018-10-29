@@ -28,7 +28,7 @@ public class ProyectoProgra3 extends Application {
        // stage.initStyle(StageStyle.TRANSPARENT);
         
         FlowController.getInstance().InitializeFlow(stage,null);
-        
+        System.out.println("ENTRO");
         FlowController.getInstance().goMain();
     }
 
