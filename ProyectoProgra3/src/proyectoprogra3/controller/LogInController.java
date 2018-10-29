@@ -13,7 +13,6 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -65,7 +64,6 @@ public class LogInController extends Controller implements Initializable {
         Animacion.getInstance().animarTexto(lbTitulo);
         imgUser.setImage(new Image("/proyectoprogra3/resources/user.png"));
         imgContra.setImage(new Image("/proyectoprogra3/resources/lock.png"));
-        System.out.println("hola mundo");
     }
 
     @Override
