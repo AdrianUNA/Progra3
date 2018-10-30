@@ -65,6 +65,7 @@ public class RegistroUsuController extends Controller implements Initializable {
     public void initialize() {
        
     }
+    
     public void selecLenguaje()
     {
        
@@ -92,7 +93,6 @@ public class RegistroUsuController extends Controller implements Initializable {
         btnCancelar.setText(idioma.getProperty("btnCancelar"));
         lbLenguaje.setText(idioma.getProperty("lbLenguaje"));
         idioma = null;
-    
     }
     @FXML
     private void selecLenguaje(Event event) {
