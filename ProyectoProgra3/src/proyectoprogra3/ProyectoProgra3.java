@@ -6,12 +6,7 @@
 package proyectoprogra3;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import proyectoprogra3.util.FlowController;
 
 /**
@@ -28,7 +23,6 @@ public class ProyectoProgra3 extends Application {
        // stage.initStyle(StageStyle.TRANSPARENT);
         
         FlowController.getInstance().InitializeFlow(stage,null);
-        System.out.println("ENTRO");
         FlowController.getInstance().goMain();
     }
 
