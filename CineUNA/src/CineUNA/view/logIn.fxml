@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="475.0" prefWidth="600.0" stylesheets="@CSS.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CineUNA.controller.LogInController">
+   <children>
+      <StackPane prefHeight="421.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="15.0" StackPane.alignment="TOP_RIGHT">
+               <StackPane.margin>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="50.0" />
+               </StackPane.margin>
+               <children>
+                  <Label id="lbTitulo" fx:id="lbLenguaje" text="Lenguaje" />
+                  <ComboBox fx:id="cbIdioma" onHidden="#seleccionarIdioma" prefHeight="25.0" prefWidth="113.0" />
+                  <ImageView fx:id="imgUser" fitHeight="122.0" fitWidth="135.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets left="200.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <HBox prefHeight="26.0" prefWidth="540.0" spacing="20.0">
+                     <children>
+                        <JFXTextField fx:id="tfUsuario" labelFloat="true" prefHeight="25.0" prefWidth="161.0" promptText="Usuario">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXTextField>
+                     </children>
+                     <padding>
+                        <Insets left="200.0" right="200.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="540.0" spacing="3.0">
+                     <children>
+                        <JFXPasswordField fx:id="tfContraseña" labelFloat="true" prefHeight="25.0" prefWidth="161.0" promptText="Contraseña">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXPasswordField>
+                        <ImageView fx:id="imgContra" fitHeight="22.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                     <padding>
+                        <Insets left="200.0" right="180.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="28.0" prefWidth="540.0">
+                     <children>
+                        <JFXButton fx:id="btnIngresar" onAction="#ingresar" prefHeight="25.0" prefWidth="161.0" text="Ingresar">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="200.0" right="200.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="29.0" prefWidth="540.0">
+                     <children>
+                        <JFXButton fx:id="btnRegistrarse" onAction="#registrarse" prefHeight="25.0" prefWidth="161.0" text="Registrarse">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="200.0" right="200.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="btnRecuperarC" onAction="#recuperarC" prefHeight="25.0" prefWidth="161.0" text="Recuperar contraseña" />
+                     </children>
+                     <padding>
+                        <Insets left="200.0" right="200.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+      <Label id="lbTituloP" fx:id="lbTitulo" layoutX="145.0" layoutY="17.0" text="Bienvenido a multicinemas" />
+      <JFXButton fx:id="btnSalir" layoutX="523.0" layoutY="421.0" onAction="#salir" text="Salir" />
+   </children>
+</AnchorPane>
