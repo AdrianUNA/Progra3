@@ -52,6 +52,8 @@ public class RegistroUsuController extends Controller implements Initializable {
     private Idioma idioma;
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {

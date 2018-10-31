@@ -20,6 +20,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import CineUNA.util.Animacion;
 import CineUNA.util.FlowController;
+import CineUNA.util.Mail;
 import CineUNA.util.properties.Idioma;
 
 /**
@@ -102,6 +103,7 @@ public class LogInController extends Controller implements Initializable {
 
     @FXML
     private void ingresar(ActionEvent event) {
+        Mail.getInstance().enviarMailActivacion("cjosue131098@hotmail.es","Cjosue");
     }
 
     @FXML
