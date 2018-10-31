@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="324.0" prefWidth="320.0" stylesheets="@CSS.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="CineUNA.controller.RecuperarContrasennaController">
+   <children>
+      <Label id="lbTitulo3" fx:id="lbSolicitarCambio" layoutX="40.0" layoutY="22.0" text="Solicitar cambio de contraseña" />
+      <JFXTextField fx:id="tfCorreo" labelFloat="true" layoutX="26.0" layoutY="150.0" prefHeight="25.0" prefWidth="273.0" promptText="Correo electronico" />
+      <JFXButton fx:id="btnCambio" layoutX="102.0" layoutY="208.0" onAction="#cambio" prefHeight="25.0" prefWidth="122.0" text="Solicitar cambio" />
+      <JFXButton fx:id="btnCancelar" layoutX="102.0" layoutY="256.0" onAction="#cancelar" prefHeight="25.0" prefWidth="122.0" text="Cancelar" />
+   </children>
+</AnchorPane>

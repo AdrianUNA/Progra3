@@ -56,7 +56,7 @@ public class LogInController extends Controller implements Initializable {
     @FXML
     private Label lbLenguaje;
 
-    public static String lenguaje = "";
+    public static String lenguaje = "Español";
     @FXML
     private JFXButton btnRecuperarC;
 
@@ -71,20 +71,31 @@ public class LogInController extends Controller implements Initializable {
     }
 
     @Override
-    public void initialize() {
-
+    public void initialize() { System.out.println("staic" + lenguaje);
+        if(lenguaje.equals("Español")||lenguaje.equals("Spanish"))
+        {
+        cbIdioma.getSelectionModel().selectFirst();
+        escogerIdi();
+        }
+        else
+        {
+        cbIdioma.getSelectionModel().selectLast();
+        escogerIdi();
+        }
     }
 
     public void escogerIdi() {
         if (cbIdioma.getSelectionModel().getSelectedItem().equals("Español")
                 || cbIdioma.getSelectionModel().getSelectedItem().equals("Spanish")) {
             idioma = new Idioma("Español");
+            lenguaje = "Español";
             cbIdioma.getItems().clear();
             cbIdioma.getItems().addAll(idioma.getProperty("chEspa"), idioma.getProperty("chIng"));
             cbIdioma.getSelectionModel().selectFirst();
 
         } else {
             idioma = new Idioma("Ingles");
+            lenguaje = "Ingles";
             cbIdioma.getItems().clear();
             cbIdioma.getItems().addAll(idioma.getProperty("chEspa"), idioma.getProperty("chIng"));
             cbIdioma.getSelectionModel().selectLast();
@@ -126,6 +137,8 @@ public class LogInController extends Controller implements Initializable {
 
     @FXML
     private void recuperarC(ActionEvent event) {
+        FlowController.getInstance().goViewInWindow("RecuperarContrasenna");
+        btnIngresar.getScene().getWindow().hide();
     }
 
 }
