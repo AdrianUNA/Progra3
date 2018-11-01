@@ -42,7 +42,7 @@ public class Request {
         this.client = ClientBuilder.newClient();
         this.webTarget = client.target(AppContext.getInstance().get("resturl") + target).path(parametros).resolveTemplates(valores);
         this.builder = webTarget.request(MediaType.APPLICATION_JSON);
-        MultivaluedMap<String, Object> headers = new MultivaluedHashMap<>();
+        MultivaluedMap <String, Object> headers = new MultivaluedHashMap<>();
         headers.add("Content-Type", "application/json; charset=UTF-8");
         builder.headers(headers);
     }

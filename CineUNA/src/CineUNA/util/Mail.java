@@ -75,7 +75,7 @@ public class Mail {
        
             message.setSubject("Activacion de Usuario");
             Mensage = "Este es un correo de activacion. Al tocar el siguiente link tu usuario sera activado, de lo contrario solo ignora este mensaje \n"+
-              BASE_URI+ "/activar/"+usuario;
+            BASE_URI+ "/activar/"+usuario;
             message.setText(Mensage);
             // message.setFileName("C:\\Users\\Carlos Olivares\\Pictures\\Imagenes\\Ballenas\\DSC00382.jpg");
             Transport.send(message);

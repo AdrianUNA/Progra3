@@ -18,22 +18,14 @@ import CineUNA.util.FlowController;
 public class CineUNA extends Application {
     
     @Override
-    public void start(Stage stage) throws Exception {
-        //Parent root = FXMLLoader.load(getClass().getResource("Inicio.fxml"));
-        // stage.getIcons().add(new Image("/tarea/resources/icon1.png"));
-       // stage.setResizable(false);
-       // stage.initStyle(StageStyle.TRANSPARENT);
-        
+    public void start(Stage stage) throws Exception {      
         FlowController.getInstance().InitializeFlow(stage,null);
-        
         FlowController.getInstance().goMain();
     }
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         launch(args);
     }
-    
 }

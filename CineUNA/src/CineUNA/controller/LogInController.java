@@ -42,24 +42,19 @@ public class LogInController extends Controller implements Initializable {
     private Label lbTitulo;
     @FXML
     private JFXButton btnSalir;
-
-    /**
-     * Initializes the controller class.
-     */
-    private Idioma idioma;
     @FXML
     private ImageView imgContra;
     @FXML
     private JFXPasswordField tfContraseña;
     @FXML
-    private ComboBox<String> cbIdioma;
+    private ComboBox <String> cbIdioma;
     @FXML
     private Label lbLenguaje;
-
-    public static String lenguaje = "Español";
     @FXML
     private JFXButton btnRecuperarC;
-
+    public static String lenguaje = "Español";
+    private Idioma idioma;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -71,16 +66,14 @@ public class LogInController extends Controller implements Initializable {
     }
 
     @Override
-    public void initialize() { System.out.println("staic" + lenguaje);
-        if(lenguaje.equals("Español")||lenguaje.equals("Spanish"))
-        {
-        cbIdioma.getSelectionModel().selectFirst();
-        escogerIdi();
-        }
-        else
-        {
-        cbIdioma.getSelectionModel().selectLast();
-        escogerIdi();
+    public void initialize() {
+        System.out.println("staic" + lenguaje);
+        if (lenguaje.equals("Español") || lenguaje.equals("Spanish")) {
+            cbIdioma.getSelectionModel().selectFirst();
+            escogerIdi();
+        } else {
+            cbIdioma.getSelectionModel().selectLast();
+            escogerIdi();
         }
     }
 
@@ -114,7 +107,7 @@ public class LogInController extends Controller implements Initializable {
 
     @FXML
     private void ingresar(ActionEvent event) {
-        Mail.getInstance().enviarMailActivacion("cjosue131098@hotmail.es","Cjosue");
+        Mail.getInstance().enviarMailActivacion("cjosue131098@hotmail.es", "Cjosue");
     }
 
     @FXML
